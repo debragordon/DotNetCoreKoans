@@ -31,7 +31,7 @@ namespace DotNetCoreKoans.Koans
             }
             catch (System.Exception ex)
             {
-                Assert.Contains("Object reference not set to an instance of an object" as string, ex.Message);
+                Assert.Contains("Object reference not set to an instance of an object." as string, ex.Message);
             }
         }
 
