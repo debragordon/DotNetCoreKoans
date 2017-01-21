@@ -17,21 +17,21 @@ namespace DotNetCoreKoans.Koans
         public void DoubleQuotedStringsAreStrings()
         {
             var str = "Hello, World";
-            Assert.Equal(typeof(FillMeIn), str.GetType());
+            Assert.Equal(typeof(string), str.GetType());
         }
 
         [Step(2)]
         public void SingleQuotedStringsAreNotStrings()
         {
-            var str = 'H';
-			Assert.Equal(typeof(FillMeIn), str.GetType());
+            var str = "H";
+			Assert.Equal(typeof(string), str.GetType());
         }
 
         [Step(3)]
         public void CreateAStringWhichContainsDoubleQuotes()
         {
             var str = "Hello, \"World\"";
-            Assert.Equal(FILL_ME_IN, str.Length);
+            Assert.Equal(14, str.Length);
         }
 
         [Step(4)]
