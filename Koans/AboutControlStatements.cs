@@ -89,8 +89,8 @@ namespace DotNetCoreKoans.Koans
             //i = null; //You can't do this
 
             int? nullableInt = null; //but you can do this
-			Assert.NotNull(FILL_ME_IN);
-			Assert.Null(FILL_ME_IN);
+			Assert.NotNull(i);
+			Assert.Null(nullableInt);
         }
 
         [Step(8)]
@@ -100,7 +100,7 @@ namespace DotNetCoreKoans.Koans
 
             int x = nullableInt ?? 42;
 
-            Assert.Equal(FILL_ME_IN, x);
+            Assert.Equal(42, x);
         }
 
         [Step(9)]
@@ -121,9 +121,9 @@ namespace DotNetCoreKoans.Koans
             if (myType is AboutMethods)
                 isAboutMethods = true;
 
-            Assert.Equal(FILL_ME_IN, isKoan);
-            Assert.Equal(FILL_ME_IN, isAboutControlStatements);
-            Assert.Equal(FILL_ME_IN, isAboutMethods);
+            Assert.Equal(true, isKoan);
+            Assert.Equal(true, isAboutControlStatements);
+            Assert.Equal(false, isAboutMethods);
 
         }
 
@@ -137,7 +137,7 @@ namespace DotNetCoreKoans.Koans
                 result = result + i;
                 i += 1;
             }
-            Assert.Equal(FILL_ME_IN, result);
+            Assert.Equal(7, result);
         }
 
         [Step(11)]
@@ -151,7 +151,7 @@ namespace DotNetCoreKoans.Koans
                 result = result + i;
                 i += 1;    
             }
-            Assert.Equal(FILL_ME_IN, result);
+            Assert.Equal(7, result);
         }
 
         [Step(12)]
