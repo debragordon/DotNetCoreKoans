@@ -165,7 +165,7 @@ namespace DotNetCoreKoans.Koans
                 if ((i % 2) == 0) { continue; }
                 result.Add(i);
             }
-            Assert.Equal(FILL_ME_IN, result);
+            Assert.Equal(new object[] {}, result);
         }
 
         [Step(13)]
