@@ -165,7 +165,7 @@ namespace DotNetCoreKoans.Koans
                 if ((i % 2) == 0) { continue; }
                 result.Add(i);
             }
-            Assert.Equal(new object[] {}, result);
+            Assert.Equal(new List<int> { 1, 3, 5, 7, 9 }, result);
         }
 
         [Step(13)]
@@ -176,7 +176,7 @@ namespace DotNetCoreKoans.Koans
             {
                 list[i] = (list[i].ToUpper());
             }
-            Assert.Equal(FILL_ME_IN, list);
+            Assert.Equal(new List<string> { "FISH", "AND", "CHIPS" }, list);
         }
 
         [Step(14)]
@@ -188,8 +188,8 @@ namespace DotNetCoreKoans.Koans
             {
                 finalList.Add(item.ToUpper());
             }
-            Assert.Equal(FILL_ME_IN, list);
-            Assert.Equal(FILL_ME_IN, finalList);
+            Assert.Equal(new List<string> { "fish", "and", "chips" }, list);
+            Assert.Equal(new List<string> { "FISH", "AND", "CHIPS" }, finalList);
         }
 
         [Step(15)]
@@ -205,7 +205,7 @@ namespace DotNetCoreKoans.Koans
             }
             catch (Exception ex)
             {
-                Assert.Equal(typeof(FillMeIn), ex.GetType());
+                Assert.Equal(typeof(System.InvalidOperationException), ex.GetType());
             }
         }
 
@@ -234,7 +234,7 @@ namespace DotNetCoreKoans.Koans
                 whoCaughtTheException = "When we tried to move to the next item in the list";
             }
 
-            Assert.Equal(FILL_ME_IN, whoCaughtTheException);
+            Assert.Equal("When we tried to move to the next item in the list", whoCaughtTheException);
         }
     }
 }
